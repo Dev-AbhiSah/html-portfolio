@@ -1,0 +1,341 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.align-center {
+    width: 90%;
+    padding: .5rem;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+nav pre , #fb-icon, #insta-icon, #linkedin-icon, #twitter-icon
+{
+    opacity: 0.5;
+}
+pre {
+    font-size: 1.3rem;
+    font-weight: 700;
+    vertical-align: text-top;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 4px;
+}
+nav>div {
+    display: inline-block;
+    width: 49.8%;
+    height: fit-content;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 3rem;
+}
+h1 {
+    font-size: 12rem;
+    font-weight: 200;
+    text-align: center;
+    font-family: 'East Sea Dokdo', cursive;
+    opacity: .8;
+    margin-bottom: 40px;
+}
+.hero > div {
+    text-align: center;
+    position: relative;
+    
+}
+span {
+    position: relative;
+    top: -100px;
+    left: 140px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.cover-profile {
+    width: 100%; /* Make the image fill the entire container */
+    /* Allow the image height to grow and shrink with the width */
+    object-fit: cover; /* Maintain the image's aspect ratio while covering the container */
+    aspect-ratio: 16 / 6;
+    border-radius: 2rem;
+  }
+.profile-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: relative;
+    top: -180px;
+    left: 28%;
+}
+nav pre a:hover 
+{
+    font-size: 1.6rem;
+}
+#fb-icon:hover,  #insta-icon:hover, #linkedin-icon:hover, #twitter-icon:hover 
+{
+    opacity: 1;
+}
+.foot-div1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:150px ;
+    gap: 3rem;
+    place-items: center;
+    width: 100vw;
+}
+.flex-cnt,.footer-sec a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot-div2
+{
+    width: 100vw;
+    height: 70px;
+    text-align: center;
+   display: flex;
+   gap: .5rem;
+   justify-content: center;
+  align-items: center;
+}
+
+.foot-div1 >.links
+{
+    display: flex;
+    height: fit-content;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-sec {
+    background-image: linear-gradient(#393646,#222434);
+}
+h3 {
+    font-size: 2rem;
+    display: inline-block;
+}
+h4{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.footer-sec a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+@media(max-width:576px)
+
+{
+    nav {
+        flex-direction: row-reverse;
+        justify-content: start;
+    }
+    nav>div {
+        width: fit-content;
+    }
+    nav ul {
+        justify-content:center;
+        gap:1.5rem;
+        padding: 10px;
+    }
+    .align-center {
+        width: 100%;
+        padding: .5rem;
+    }
+    h1 {
+        font-size: 7rem;
+    }
+    nav> div> pre {
+        display: none;
+    }
+    .cover-profile ,.img-container
+    {
+        min-height: 170px;
+    }
+    .hero span {
+        font-size: 1.2rem;
+        top: -77px;
+        left: 14%;
+    }
+    .profile-img {
+        width: 170px;
+        height: 170px;
+        left: 0%;
+        top:-100px;
+    }
+    .feature
+    {
+        margin-bottom: 5rem;
+    }
+    .feature >div
+    {
+        flex-wrap: wrap;
+    }
+    .feature >div>div
+    {
+        width: 400px;
+        margin: 0px 0px 50px 0px;
+        min-width: 300px;
+    }
+    .card h2 {
+        font-size: 2rem;
+    }
+    .card p ,.card a {
+        font-size: 1.3rem;
+        width: 80%;
+    }
+    .foot-div1
+    {
+        height: fit-content;
+        padding: 1.5rem 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: .3rem;
+    }
+}
+@media(min-width:576px)and (max-width:768px){
+    nav {
+        flex-direction: row-reverse;
+    }
+    .align-center{
+        width: 100%;
+    }
+    nav> div> pre {
+        display: none;
+    }
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        left: 0%;
+        top:-100px;
+    }
+    .feature >div
+    {
+        flex-wrap: wrap;
+    }
+    .feature >div>div
+    {
+        width: 400px;
+        margin: 0px 0px 50px 0px;
+    }
+    .card h2 {
+        font-size: 2rem;
+    }
+    .card p ,.card a {
+        font-size: 1.3rem;
+        width: 80%;
+    }
+    .footer-sec a {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-sec h3 {
+        margin: .3rem;
+        font-size: 1.7rem;
+    }
+    .foot-div1{
+        gap: 1rem;
+    }
+    .footer-sec .odd-img{
+        height: 50px;
+    }
+    .footer-sec .even-img{
+        height: 40px;
+    }
+    
+}
+@media(min-width:768px)and (max-width:992px){
+    .align-center{
+        width: 100%;
+    }
+    nav> div> pre {
+        display: none;
+    }
+    nav {
+        flex-direction: row-reverse;
+    }
+    ul {
+        justify-content: start;
+    }
+    .profile-img {
+        left:0%;       
+        height: 250px;
+        width: 250px;
+        top: -150px;
+        left: 0%;
+    }
+    .cover-profile {
+        aspect-ratio: 16 / 6.5;
+        min-height: 310px;
+    }
+    .feature >div
+    {
+        flex-wrap: wrap;
+    }
+    .feature >div>div
+    {
+        width: 320px;
+        margin: 6px 6px 50px 6px;
+    }
+    .card h2 {
+        font-size: 2rem;
+    }
+    .card p ,.card a {
+        font-size: 1.3rem;
+        width: 80%;
+    }
+    .footer-sec a {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-sec h3 {
+        margin: .3rem;
+    }
+    .foot-div1{
+        gap: 1.5rem;
+    }
+}
+@media(min-width:992px)and (max-width:1200px){
+    .align-center{
+        width: 93%;
+    }
+    pre {
+        letter-spacing: 3px;
+    }
+    .cover-profile {
+        aspect-ratio: 16 / 6.4;
+        min-width:390px;
+        
+    }
+    .feature >div >div{
+        min-width: 300px;
+        height: 450px;
+    }
+    .card h2 {
+        font-size: 2rem;
+    }
+    .card p ,.card a {
+        font-size: 1.3rem;
+        width: 80%;
+    }
+    
+}
+@media(min-width:1200px)and (max-width:1400px){
+    .cover-profile {
+       min-height: 440px;
+    }
+}
